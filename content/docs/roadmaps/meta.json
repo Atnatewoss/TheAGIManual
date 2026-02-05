@@ -2,8 +2,11 @@
     "title": "Roadmaps",
     "pages": [
         "overview",
+        "two-year-plan",
         "short-term",
         "long-term",
+        "challenges-risks",
+        "metrics",
         "ethics"
     ]
 }

@@ -1,0 +1,41 @@
+---
+title: Evaluation Metrics
+description: How we measure progress toward Artificial General Intelligence
+---
+
+# Evaluation Metrics
+
+How do we know if we are actually building AGI, or just a very impressive "Narrow" system?
+
+## The Problem with Current Benchmarks
+
+Most current benchmarks (like ImageNet or GLUE) test **Performance**, not **Generality**. A system can win a benchmark simply by memorizing the distribution of the test set.
+
+## New Metrics for AGI
+
+### 1. The ARC Score
+The **Abstraction and Reasoning Corpus** (ARC) is currently our best metric for general intelligence. It requires learning from few examples without any prior training on the specific task.
+
+### 2. Sample Efficiency
+Measuring how few examples a system needs to learn a new concept compared to a human.
+- *Narrow AI*: 1,000,000 examples.
+- *AGI Goal*: 1-5 examples.
+
+### 3. Cross-Domain Transfer
+Measuring how much performance on `Task A` improves `Task B`. If learning to play Chess doesn't help the agent learn how to play Go, it isn't "General."
+
+### 4. Self-Improvement Rate
+The ability of the system to identify and fix bottlenecks in its own reasoning or code.
+
+## The Maturity Model
+
+| Stage | Metric Requirement | Current Status |
+| :--- | :--- | :--- |
+| **Stage 1** | Solves static datasets | Achieved (Narrow AI) |
+| **Stage 2** | Adapts to distribution shifts | Partial (Few-Shot) |
+| **Stage 3** | Zero-shot task creation | Research Phase |
+| **Stage 4** | Recursive Self-Optimization | Theoretical |
+
+---
+
+Next: [Experiments section](/docs/experiments/overview)
