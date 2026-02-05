@@ -1,0 +1,74 @@
+---
+title: MeTTa Syntax
+description: The syntax and fundamental constructs of Meta Type Talk
+---
+
+# MeTTa Syntax
+
+MeTTa's syntax is intentionally simple and uniform. Like LISP, it uses parentheses to define structured "Atoms."
+
+## Basic Atoms
+
+### Symbols and Numbers
+- **Symbols**: `Socrates`, `Human`, `is-mortal`, `+`, `*`
+- **Numbers**: `42`, `3.14159`
+- **Strings**: `"Hello, MeTTa"`
+
+### Variables
+Variables start with a dollar sign `$`.
+- `$x`, `$person`, `$result`
+
+## Expressions (Links)
+An expression is a parenthesized list of Atoms.
+- `(Inheritance Socrates Human)`
+- `(Evaluation is-mortal (List Socrates))`
+- `(+ 2 2)`
+
+In MeTTa, these are also referred to as **Links** in the context of the AtomSpace.
+
+## Evaluation Rules
+
+MeTTa computes by **reducing** expressions.
+
+### Equality and Reduction
+The symbol `=` is used to define reduction rules.
+```lisp
+(= (double $x) (* $x 2))
+```
+If the system sees `(double 5)`, it will reduce it to `(* 5 2)`, and then to `10`.
+
+### Non-Deterministic Matching
+MeTTa can return multiple results for a single query.
+```lisp
+(= (fruit) apple)
+(= (fruit) orange)
+(= (fruit) banana)
+
+;; (fruit) will evaluate to apple, orange, and banana (sequentially or in parallel)
+```
+This property is essential for exploring multiple reasoning paths.
+
+## Comments
+- Use a double semicolon for comments: `;; This is a comment`
+
+## Special Symbols
+- **Bind**: used to assign values to symbols in a specific scope.
+- **Match**: the primary command for querying the AtomSpace.
+- **Let**: local variable binding.
+
+## Core Language Constructs
+
+### If-Then-Else
+```lisp
+(if (> $x 10) "Large" "Small")
+```
+
+### Pattern Matching
+```lisp
+(match (AtomSpace) (Inheritance $x Human) $x)
+;; Finds all Atoms $x that inherit from Human
+```
+
+---
+
+Next: [Types and Pattern Matching](/docs/metta/types)

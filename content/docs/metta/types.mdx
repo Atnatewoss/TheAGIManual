@@ -1,0 +1,57 @@
+---
+title: Types and Pattern Matching
+description: Advanced type systems and matching logic in MeTTa
+---
+
+# Types and Pattern Matching
+
+MeTTa features a sophisticated type system and pattern matching engine that allow for complex knowledge representation and reasoning.
+
+## The MeTTa Type System
+
+MeTTa uses **Gradual Typing**. You can write code without any types, or you can add strict type annotations.
+
+### Defining Types
+Use the `:` symbol to define the type of an Atom.
+- `(: Socrates Human)` — Socrates is of type Human.
+- `(: + (-> Number Number Number))` — Addition is a function that takes two numbers and returns a number.
+
+### Type Checking
+Types are checked at runtime during the matching and reduction process. If a rule requires a `Number` but gets a `String`, the rule will not match.
+
+### Generic Types and Polymorphism
+MeTTa supports generic types using variables.
+- `(: head (-> (List $t) $t))` — `head` takes a list of any type `$t` and returns an element of that same type.
+
+## Advanced Pattern Matching
+
+Pattern matching in MeTTa is much more powerful than simple string matching. It involves **Unification**.
+
+### Variable Binding
+When a pattern like `(Likes $person pizza)` is matched against `(Likes John pizza)`, the variable `$person` becomes **bound** to `John`.
+
+### Structural Matching
+Patterns can match the structure of complex hypergraphs.
+```lisp
+(match (AtomSpace)
+  (Similarity (Concept $a) (Concept $b))
+  (List $a $b))
+```
+
+### Guarded Patterns
+You can add conditions to your matches.
+```lisp
+(match (AtomSpace)
+  (Balance $account $amount)
+  (if (> $amount 1000) $account (nop)))
+```
+
+## Why this matters for AGI
+The combination of a flexible type system and deep pattern matching allows the system to:
+- **Organize Knowledge**: Taxonomies are represented naturally via types.
+- **Verify Logic**: Type checking can catch errors in reasoning rules.
+- **Discover Relations**: Pattern matching is the foundation for induction and analogy.
+
+---
+
+Next: [MeTTa as a Meta-Language](/docs/metta/meta-language)

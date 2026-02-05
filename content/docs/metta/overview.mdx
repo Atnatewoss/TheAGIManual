@@ -1,0 +1,40 @@
+---
+title: MeTTa Overview
+description: Introduction to Meta Type Talk (MeTTa) - the language of AGI
+---
+
+# MeTTa Overview
+
+MeTTa (Meta Type Talk) is the primary programming and knowledge representation language for the OpenCog Hyperon framework. It is specifically designed to meet the requirements of Artificial General Intelligence.
+
+## Why MeTTa?
+Standard programming languages (like Python or C++) are designed for efficient execution of fixed algorithms. They are not ideally suited for:
+1. **Dynamic Knowledge Representation**: Storing self-modifying, uncertain knowledge.
+2. **Meta-Reasoning**: Programs that can easily reason about and rewrite their own code.
+3. **Neuro-Symbolic Integration**: Coherently mixing neural activations with symbolic rules.
+
+MeTTa is designed from the ground up to solve these problems.
+
+## Core Characteristics
+
+### 1. Atom-Centric
+In MeTTa, there is no distinction between "code" and "data." Everything is an **Atom**. This property, called **homoiconicity**, allows the system's reasoning engines to manipulate program logic as easily as they manipulate facts.
+
+### 2. Pattern Matching as Computation
+Unlike imperative languages where you give a sequence of commands, MeTTa "computes" by transforming Atoms through pattern matching and rewriting rules.
+
+### 3. Gradual Typing
+MeTTa supports a flexible type system. You can have untyped code for rapid exploration and strictly typed code for formal verification and optimization.
+
+### 4. Multi-Paradigm
+MeTTa naturally supports:
+- **Functional Programming**: via mapping and reduction.
+- **Logic Programming**: similar to Prolog but more flexible.
+- **Probabilistic Programming**: handling uncertain truth values.
+
+## How it Connects to Hyperon
+MeTTa is the interface to the **AtomSpace**. When you write MeTTa code, you are effectively creating and manipulating Atoms in the hypergraph database. The **Pattern Matcher** and **PLN** reasoner are invoked directly from within MeTTa scripts.
+
+---
+
+Next: [MeTTa Syntax](/docs/metta/syntax)

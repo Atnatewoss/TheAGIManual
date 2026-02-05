@@ -1,0 +1,43 @@
+---
+title: MeTTa as a Meta-Language
+description: Self-reflection and multi-language orchestration in MeTTa
+---
+
+# MeTTa as a Meta-Language
+
+The "Meta" in MeTTa stands for its ability to act as a **meta-language**—a language used to define and control other languages and algorithms.
+
+## Self-Reflection (Reflection)
+Because MeTTa code is stored as Atoms, a MeTTa program can "read" its own code and modify it.
+
+### Examples of Reflection
+- **Self-Optimization**: A program can analyze its own execution trace and rewrite sections of its code to be more efficient.
+- **Dynamic Rule Generation**: A reasoning engine can create new rules of logic base on its experiences.
+
+## Orchestration
+MeTTa acts as the "glue" that connects diverse AI components in the Hyperon framework.
+
+### 1. Orchestrating Neural Models
+You can wrap a Python neural network (like a Transformer) and expose it as a MeTTa Atom.
+```lisp
+;; Hypothetical code calling a neural model
+(= (get-embedding $text) (py-call "model.embed" $text))
+```
+
+### 2. Orchestrating Symbol Engines
+MeTTa can invoke the PLN reasoner or the MOSES program synthesizer to solve specific sub-problems and then integrate their results.
+
+## Defining Domain-Specific Languages (DSLs)
+You can use MeTTa to define a small, specialized language for a specific task (e.g., a language for robotics control or for molecular biology) and then use MeTTa's core engines to execute that DSL.
+
+## Role in AGI
+To achieve AGI, a system must be able to:
+- Understand its own internal state (**Reflect**).
+- Coordinate many different skills (**Orchestrate**).
+- Adapt to new domains by creating new concepts (**DSL generation**).
+
+MeTTa provides the technical foundation for all three.
+
+---
+
+Next: [PRIMUS Overview](/docs/primus/overview)
