@@ -15,8 +15,12 @@ export const docs = defineDocs({
   },
 });
 
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+
 export default defineConfig({
   mdxOptions: {
-    // MDX options
+    remarkPlugins: [remarkMath],
+    rehypePlugins: (plugins) => [rehypeKatex, ...plugins],
   },
 });
