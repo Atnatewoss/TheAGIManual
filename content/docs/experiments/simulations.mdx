@@ -1,0 +1,33 @@
+---
+title: Simulation Environments
+description: Training and testing AGI in virtual 3D worlds
+---
+
+# Simulation Environments
+
+Embodied AI requires an environment to live and learn in. Since physical robots are expensive and slow, we use high-fidelity simulation environments.
+
+## 1. Robot-Operating-System (ROS) Integration
+We connect Hyperon/MeTTa to ROS, allowing our AGI designs to control simulated (and eventually real) robots.
+
+## 2. Minecraft / Project Malmo
+Minecraft provides a rich, voxel-based world where agents must:
+- Collect resources (Short-term planning).
+- Craft tools (Hierarchical planning).
+- Survive and build (Open-ended goals).
+
+## 3. Sophia-DAO Simulation
+A specialized simulator designed for the Sophia robot, focusing on social interaction and emotional recognition.
+
+## 4. Unity / Unreal Engine Custom Sims
+Used for high-fidelity physics and vision experiments.
+- **Task Example**: "Navigate this complex apartment and find the hidden keys."
+
+## Why Simulations Matter
+- **Safety**: Errors in a simulator don't break hardware.
+- **Speed**: We can run simulations at 10x or 100x real-time speed.
+- **Diversity**: We can instantly change the world's physics or layout.
+
+---
+
+Next: [Notes Overview](/docs/notes/overview)

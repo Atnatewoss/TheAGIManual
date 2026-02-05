@@ -1,0 +1,34 @@
+---
+title: Standard Benchmarks
+description: Comparing AGI systems against industry-standard benchmarks
+---
+
+# Standard Benchmarks
+
+To measure progress toward AGI, we use several standard benchmarks that test different aspects of intelligence.
+
+## 1. ARC (Abstraction and Reasoning Corpus)
+Developed by François Chollet, ARC tests a system's ability to learn new concepts from just a few examples in a grid-based world.
+- **Why it's hard**: It requires identifying abstract rules (symmetry, rotation, color fill) that aren't explicitly taught.
+- **Hyperon Results**: [Link to research paper]
+
+## 2. GLUE / SuperGLUE
+Benchmarks for natural language understanding (NLU).
+- **Focus**: Sentiment analysis, question answering, and logical entailment.
+- **Significance**: Testing if our symbolic NLU can match or exceed Transformer-only models.
+
+## 3. Winograd Schema Challenge
+A test of "common sense" reasoning using ambiguous pronouns.
+- *Example*: "The trophy doesn't fit into the brown suitcase because it's too large." (What is "it"?).
+- **AGI Approach**: Using PLN to reason about physical properties like "size" and "containment."
+
+## 4. Big-Bench (Beyond the Imitation Game)
+A massive collaborative benchmark for evaluating large language models across hundreds of tasks.
+- **Our Goal**: Using MeTTa to provide structured reasoning traces for Big-Bench tasks.
+
+## 5. MuJoCo / Atari
+Standard reinforcement learning environments for testing control and decision-making.
+
+---
+
+Next: [Simulation Environments](/docs/experiments/simulations)
