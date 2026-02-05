@@ -1,0 +1,41 @@
+---
+title: PLN (Probabilistic Logic Networks)
+description: Uncertain reasoning using Probabilistic Logic Networks in Hyperon
+---
+
+# PLN (Probabilistic Logic Networks)
+
+Probabilistic Logic Networks (PLN) is the primary reasoning framework in Hyperon. It is designed to bridge the gap between formal logic and probability theory, allowing for reasoning with uncertain and inconsistent knowledge.
+
+## Why PLN?
+Classical logic is often too brittle for real-world AGI, which must deal with noise, ambiguity, and lack of information. Bayesian networks are powerful but often lack the expressiveness of predicate logic. PLN attempts to provide the best of both worlds.
+
+## Key Concepts
+
+### Strength and Confidence
+In PLN, Every "TruthValue" has two components:
+- **Strength**: How likely the relationship is (0 to 1). Similar to a probability.
+- **Confidence**: How much evidence supports this strength (0 to 1). Highly dependent on count and weight of evidence.
+
+### Inference Rules
+PLN provides a set of inference rules that work on these TruthValues:
+- **Deduction**: If A implies B and B implies C, how much does A imply C?
+- **Induction**: If A has property X and B has property X, how much do they share other properties?
+- **Abduction**: Finding the most likely explanation for an observation.
+- **Analogy**: Transferring knowledge between similar concepts based on shared relationships.
+
+## Integration with AtomSpace
+PLN rules are themselves stored as Atoms or MeTTa scripts. The PLN engine searches the AtomSpace for matching patterns, applies rules, and writes back the results.
+
+## Forward vs Backward Chaining
+- **Forward Chaining**: Starting from known facts and exploring what can be derived. Good for exploration.
+- **Backward Chaining**: Starting from a query (a goal) and working backward to see if the knowledge base can support it. Good for specific queries.
+
+## Challenges in PLN
+1. **Computational Complexity**: Probabilistic logic is NP-hard in the general case.
+2. **Infinite Loops**: Ensuring the reasoner doesn't get stuck in cycles.
+3. **Consistency**: Handling contradictions when different evidence leads to different conclusions.
+
+---
+
+Next: [MOSES](/docs/hyperon/moses)

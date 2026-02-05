@@ -1,0 +1,40 @@
+---
+title: MOSES
+description: Evolutionary program synthesis with Meta-Optimizing Semantic Evolutionary Search
+---
+
+# MOSES
+
+MOSES (Meta-Optimizing Semantic Evolutionary Search) is Hyperon's primary engine for **program synthesis**. Instead of evolving raw bitstrings, MOSES evolves short programs represented in a specialized representation.
+
+## How MOSES Works
+
+MOSES is designed to find programs that satisfy a specific objective function (fitness).
+
+### 1. Representation
+MOSES uses a hierarchical representation that is easier to evolve than raw MeTTa or Python code. It avoids "junk" or "bloat" that often plagues standard Genetic Programming.
+
+### 2. Semantic Search
+Unlike traditional GAs that rely on random mutation, MOSES uses a more "intelligent" search process:
+- It maintains a population of program templates.
+- It uses local optimization to "tune" the parameters of these templates.
+- It identifies high-performing "building blocks" and combines them.
+
+### 3. Competence Monitoring
+The algorithm monitors its own performance and adjusts its search strategy based on the complexity of the task and the quality of the candidates found so far.
+
+## Role in Hyperon
+MOSES is used for:
+- **Feature Discovery**: Finding novel patterns in large datasets.
+- **Automatic Program Improvement**: Evolving more efficient versions of existing algorithms.
+- **Goal-Directed Synthesis**: Creating a plan or behavior to achieve a specific goal.
+
+## MOSES vs. Deep Learning
+- **Deep Learning**: Powerful at finding patterns in continuous spaces with gradients.
+- **MOSES**: Powerful at finding patterns in **discrete, structured spaces** (like code) where gradients are not available.
+
+In a full AGI system, MOSES might be used to evolve the "high-level logic" or "strategies" that control a lower-level neural network.
+
+---
+
+Next: [The Pattern Matcher](/docs/hyperon/pattern-matcher)

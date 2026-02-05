@@ -1,0 +1,44 @@
+---
+title: The AtomSpace
+description: Understanding the hypergraph-based knowledge store of Hyperon
+---
+
+# The AtomSpace
+
+The AtomSpace is the heart of Hyperon. It is a specialized, distributed database designed to store complex, multi-layered knowledge in a way that AI algorithms can easily traverse and reason about.
+
+## Atoms: The Building Blocks
+Everything in the AtomSpace is an **Atom**. There are two primary types:
+- **Nodes**: Represent individual concepts or data points (e.g., "Human", "Socrates").
+- **Links**: Represent relationships between Atoms. Since it's a *hypergraph*, a link can connect any number of atoms (not just two).
+
+### Examples of Atoms
+- `ConceptNode "intelligence"`
+- `InheritanceLink (ConceptNode "Socrates") (ConceptNode "Human")`
+- `EvaluationLink (PredicateNode "is-mortal") (ListLink (ConceptNode "Socrates"))`
+
+## Key Characteristics
+
+### 1. Unified Knowledge Representation
+Symbols, data, rules, and even executable code are all stored as Atoms. This means the system can treat "code" like "data" (homoiconicity), which is essential for self-modification.
+
+### 2. Meta-Information (Truth Values)
+Each Atom can have associated metadata, most notably **Truth Values**:
+- **Strength**: How true the relationship is (0 to 1).
+- **Confidence**: How much evidence the system has for this truth value.
+
+### 3. Attention Values
+Used for resource management. Atoms that are frequently used gain "STI" (Short-Term Importance), while those rarely used are eventually "forgotten" or moved to long-term storage.
+
+## The Distributed AtomSpace (DAS)
+In a production AGI system, the knowledge base will be too large for a single machine. The DAS provides:
+- **Scalability**: Sharding knowledge across a cluster.
+- **Query Optimization**: Efficiently finding patterns across millions of Atoms.
+- **Persistence**: Ensuring knowledge survives system restarts.
+
+## Interaction with Search and Reasoners
+Reasoners like PLN use the AtomSpace to find facts, combine them using rules, and write back new derived facts as new Atoms.
+
+---
+
+Next: [MeTTa Basics](/docs/metta/overview)

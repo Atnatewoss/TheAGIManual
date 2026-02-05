@@ -1,0 +1,38 @@
+---
+title: Hyperon Overview
+description: Introduction to the OpenCog Hyperon framework for scalable AGI
+---
+
+# Hyperon Overview
+
+OpenCog Hyperon is a major redo of the OpenCog AGI framework. It is designed to be faster, more flexible, and more scalable, with a focus on integrating different AI algorithms into a single, unified system.
+
+## The Core Vision
+Hyperon's goal is to create a "Grand Unified Theory" implementation for AGI, where neural, symbolic, evolutionary, and probabilistic components work together in a shared knowledge space.
+
+## Key Components
+
+### 1. AtomSpace
+A distributed, high-performance hypergraph database. It stores "Atoms" (nodes and links) which can represent anything from low-level data to high-level concepts and even program code.
+
+### 2. MeTTa (Meta Type Talk)
+Hyperon's primary programming and query language. MeTTa is:
+- **Atom-based**: MeTTa code *is* stored as atoms in the AtomSpace.
+- **Reflective**: MeTTa programs can reason about and modify themselves.
+- **Multi-paradigm**: Supports functional, logic, and imperative styles.
+
+### 3. Distributed AtomSpace (DAS)
+Ensures that the knowledge base can scale across many machines, allowing for massive-scale AGI experiments.
+
+### 4. PLN (Probabilistic Logic Networks)
+A reasoning engine that performs uncertain inference over the AtomSpace, combining logic and probability.
+
+## Why Hyperon?
+
+- **Interoperability**: Allows different AI tools to "talk" to each other through the shared AtomSpace.
+- **Neuro-symbolic by Design**: Built from the ground up to bridge the symbolic and neural worlds.
+- **Self-Modification**: The system is designed to eventually be able to rewrite its own code to become more efficient—a key requirement for recursive self-improvement in AGI.
+
+---
+
+Next: [The AtomSpace](/docs/hyperon/atomspace)

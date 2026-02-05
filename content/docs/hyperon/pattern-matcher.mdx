@@ -1,0 +1,46 @@
+---
+title: The Pattern Matcher
+description: Efficient query and retrieval in the Hyperon AtomSpace
+---
+
+# The Pattern Matcher
+
+The Pattern Matcher is the primary engine for querying and retrieving information from the Hyperon AtomSpace. It allows AI algorithms to find structured patterns within the massive hypergraph.
+
+## What is Pattern Matching?
+In the context of the AtomSpace, a "pattern" is a partially completed graph (a query). The pattern matcher finds all possible ways to "fill in the blanks" (variables) using existing Atoms.
+
+### Example Query
+Suppose we want to find all people who live in New York:
+```lisp
+(Match (AtomSpace)
+  (EvaluationLink
+    (PredicateNode "lives-in")
+    (ListLink (VariableNode "$person") (ConceptNode "New York"))
+  )
+  $person
+)
+```
+
+## Features of the Hyperon Pattern Matcher
+
+### 1. Variables and Grounding
+Supports variables that can match any Atom or specific types of Atoms.
+
+### 2. High Performance
+Designed to handle millions of Atoms across a distributed cluster. It uses sophisticated indexing and sub-graph isomorphism algorithms to find matches quickly.
+
+### 3. Recursion and Composition
+Patterns can be nested, and the results of one match can be used as input for the next. This is essential for complex reasoning.
+
+### 4. Integration with MeTTa
+The pattern matcher is directly exposed in the MeTTa language, making it the primary way to "read" from the system's memory.
+
+## Use Cases
+- **Fact Retrieval**: "Who is the CEO of Google?"
+- **Rule Triggering**: "Find all Atoms that match the preconditions of the 'buy-milk' rule."
+- **Knowledge Synthesis**: "Find links between concept A and concept B that have a high confidence score."
+
+---
+
+Next: [MeTTa Overview](/docs/metta/overview)
