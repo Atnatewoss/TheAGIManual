@@ -3,6 +3,10 @@
     "pages": [
         "overview",
         "pattern-recognition",
-        "integration"
+        "integration",
+        "goal-driven-behavior",
+        "planning-loops",
+        "decision-making",
+        "example-agent"
     ]
 }

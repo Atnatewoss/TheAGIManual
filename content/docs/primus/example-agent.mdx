@@ -1,0 +1,47 @@
+---
+title: Example Agent
+description: A step-by-step walkthrough of a PRIMUS-based agent in action
+---
+
+# Example Agent: The "Library Bot"
+
+To understand how PRIMUS works in practice, let's walk through a simple scenario with a hypothetical Library Assistant Bot.
+
+## The Setup
+
+- **World**: A library with books, shelves, and human patrons.
+- **Agent Drives**: 1. Helpful (Priority 1), 2. Orderly (Priority 2), 3. Energy Saving (Priority 3).
+- **Environment**: A patron asks for a book that is currently on the floor.
+
+## Step 1: Perception (PRUs)
+The bot's cameras see a "Red Object" on the "Grey Ground."
+- **PRU output**: Identifies the object as a "Book" and its location as "Floor."
+- **AtomSpace update**: `(At Book_123 Floor_Area_5)`
+
+## Step 2: Goal Activation
+The **Helpful** drive is triggered by the patron's request.
+- **Goal created**: `(In Patron_Hand Book_123)`
+
+## Step 3: Planning Loop
+The bot projects a sequence of actions:
+1. Move to `Floor_Area_5`.
+2. Pick up `Book_123`.
+3. Move to `Patron_Location`.
+4. Give `Book_123`.
+
+## Step 4: Decision Making
+Is this plan safe? Is there a faster way?
+- The bot evaluates the plan against its **Safety** constraints. The path is clear, so it proceeds.
+
+## Step 5: Action and Monitoring
+As the bot moves, it detects a person walking across its path.
+- **Monitor output**: "Environment Mismatch! Path Blocked."
+- **Re-plan**: The bot pauses, waits for the person to pass (Reactive adjustment), and then continues its plan.
+
+## Step 6: Goal Success
+The book is handed over. The goal `(In Patron_Hand Book_123)` is achieved.
+- **Internal Reward**: The "Helpful" drive is satisfied, and the agent moves to its next goal (Ordering books on shelves).
+
+---
+
+End of PRIMUS Section. Next: [MeTTa section](/docs/metta/overview)
