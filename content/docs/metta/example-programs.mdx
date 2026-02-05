@@ -1,0 +1,75 @@
+---
+title: Example Programs
+description: Detailed code examples demonstrating MeTTa's power
+---
+
+# Example Programs
+
+Let's look at more complex MeTTa programs to see how they handle Knowledge Representation and Reasoning.
+
+## 1. Simple Knowledge Graph
+Defining relationships and querying them.
+
+```lisp
+;; Define some facts
+(Inheritance Socrates Man)
+(Inheritance Plato Man)
+(Inheritance Man Mortal)
+
+;; A rule for transitive inference
+(= (is-mortal $x)
+   (match (AtomSpace)
+     (and (Inheritance $x $type)
+          (Inheritance $type Mortal))
+     $x))
+
+;; Query: Who is mortal?
+!(is-mortal $who)
+;; Result: [Socrates, Plato]
+```
+
+## 2. Recursive Factorial
+Demonstrating functional programming style.
+
+```lisp
+(= (fact $n)
+   (if (== $n 0)
+       1
+       (* $n (fact (- $n 1)))))
+
+!(fact 5)
+;; Result: 120
+```
+
+## 3. Pattern-Based Transformation
+Transforming a list structure.
+
+```lisp
+;; Swapping elements in a list link
+(= (swap (List $a $b)) (List $b $a))
+
+!(swap (List "Input" "Output"))
+;; Result: (List "Output" "Input")
+```
+
+## 4. Probabilistic Reasoning (PLN Style)
+Using Atoms with metadata (Note: This is a conceptual example of how TruthValues are handled).
+
+```lisp
+;; Atom with Strength 0.9, Confidence 0.8
+(Member (Concept "Tweety") (Concept "Bird") (0.9 0.8))
+
+;; A rule that accounts for the TruthValue
+(= (can-fly $x)
+   (match (AtomSpace)
+     (Member $x (Concept "Bird") ($s $c))
+     (if (> $s 0.5) $x (Empty))))
+```
+
+## Learning from Examples
+
+The best way to learn MeTTa is to **Modify and Run**. Try taking the Knowledge Graph example and adding a `Woman` concept, then update the rules to handle it.
+
+---
+
+End of MeTTa Section. Next: [Roadmaps section](/docs/roadmaps/overview)

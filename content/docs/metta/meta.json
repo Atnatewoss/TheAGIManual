@@ -2,8 +2,11 @@
     "title": "MeTTa",
     "pages": [
         "overview",
+        "why-metta",
         "syntax",
         "types",
+        "running-code",
+        "example-programs",
         "meta-language"
     ]
 }

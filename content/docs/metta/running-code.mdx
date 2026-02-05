@@ -1,0 +1,65 @@
+---
+title: Running MeTTa Code
+description: Practical guide to executing scripts in the Hyperon environment
+---
+
+# Running MeTTa Code
+
+MeTTa scripts can be run in several ways depending on whether you are doing research, building an agent, or integrating with Python.
+
+## The MeTTa Interpreter
+
+The primary way to run code is using the official MeTTa interpreter (often part of the Hyperon-core package).
+
+### Running a script from terminal
+```bash
+metta my_script.metta
+```
+
+### The REPL (Read-Eval-Print Loop)
+You can enter an interactive mode to test patterns on the fly:
+```bash
+metta --repl
+```
+
+## Basic Structure of a Program
+
+A MeTTa program generally consists of:
+1. **Atoms** added to the AtomSpace.
+2. **Rules** defined using the `=` symbol.
+3. **Queries** executed via an implicit match or an explicit call.
+
+### Example: Hello World
+```lisp
+;; Define a rule
+(= (greet $name) (format "Hello, {}!" $name))
+
+;; Call the rule
+!(greet "AGI Researcher")
+```
+*The `!` prefix tells the interpreter to "Execute/Evaluate this immediately."*
+
+## Integrating with Python
+
+Since most AI research is in Python, MeTTa provides a seamless bridge.
+
+```python
+from hyperon import MeTTa
+
+# Initialize the interpreter
+m = MeTTa()
+
+# Run some MeTTa code directly from Python
+result = m.run('!(+ 2 2)')
+print(result) # Output: [[4]]
+```
+
+## Error Handling and Debugging
+
+Unlike traditional languages, "Errors" in MeTTa often result in **Failing to Match**. If you try to call a function that doesn't exist, MeTTa won't crash; it will simply return an "Empty Set" because no rewrite rule was found.
+
+**Debugging Tip**: Use the `(Match (AtomSpace) ...)` query to inspect the state of your knowledge base if your results aren't what you expect.
+
+---
+
+Next: [Example Programs](/docs/metta/example-programs)
