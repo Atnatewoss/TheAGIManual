@@ -2,6 +2,10 @@
     "title": "Architectures",
     "pages": [
         "overview",
+        "memory-systems",
+        "reasoning-engines",
+        "learning-modules",
+        "agent-loops",
         "symbolic-systems",
         "neural-systems",
         "neuro-symbolic",
