@@ -1,0 +1,62 @@
+---
+title: Search and Planning
+description: Algorithms for finding sequences of actions to achieve goals
+---
+
+# Search and Planning
+
+Search and planning are fundamental to decision-making in AGI. While search explores a state space to find a goal, planning involves reasoning about the effects of actions to construct a solution.
+
+## Classical Search
+
+### Uninformed Search
+- **Breadth-First Search (BFS)**: Guaranteed shortest path in unweighted graphs.
+- **Depth-First Search (DFS)**: Low memory requirement, but may not be optimal.
+- **Uniform Cost Search**: Dijkstra's algorithm for weighted graphs.
+
+### Informed (Heuristic) Search
+- **A* Search**: Uses a heuristic $h(n)$ to guide the search. $f(n) = g(n) + h(n)$.
+- **Iterative Deepening A***: Combines DFS memory efficiency with A* optimality.
+- **Greedy Best-First Search**: Expands nodes based solely on the heuristic.
+
+## Adversarial Search
+Used in environments with competing agents (e.g., games).
+- **Minimax Algorithm**: Minimizing the maximum possible loss.
+- **Alpha-Beta Pruning**: Drastically reduces the number of nodes evaluated.
+- **Monte Carlo Tree Search (MCTS)**: Used in AlphaGo; combines tree search with random simulations.
+
+## Planning
+
+### State-Space Planning
+- **Forward Search**: Searching from the initial state to the goal.
+- **Backward Search**: Searching from the goal back to the initial state.
+
+### Symbolic Planning
+- **STRIPS/PDDL**: Formal languages for describing states, actions, preconditions, and effects.
+- **Graphplan**: Uses a "planning graph" to find solutions efficiently.
+
+### Hierarchical Task Networks (HTN)
+Decomposing high-level tasks into smaller sub-tasks.
+- **Relevance**: Closer to how humans plan complex activities.
+
+## Planning Under Uncertainty
+
+### Markov Decision Processes (MDPs)
+Planning when actions have probabilistic outcomes.
+- **Value Iteration**: Computing optimal state values.
+- **Policy Iteration**: Alternating between evaluation and improvement.
+
+### Partially Observable MDPs (POMDPs)
+Planning when the agent doesn't have full knowledge of the current state.
+- **Belief States**: Probability distributions over possible states.
+
+## Integration in AGI
+
+Modern AGI research often combines deep learning with search/planning:
+1. **Differentiable Planning**: Learning to plan using neural networks (e.g., VIN).
+2. **Model-Based Reinforcement Learning**: Learning a world model and using it for planning (e.g., MuZero).
+3. **Logic-Based Planning in MeTTa**: Using pattern matching and rewriting for symbolic planning (covered in the MeTTa section).
+
+---
+
+Foundations complete. Next: [Architectures Overview](/docs/architectures/overview)

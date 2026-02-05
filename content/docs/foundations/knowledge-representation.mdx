@@ -1,0 +1,144 @@
+---
+title: Knowledge Representation
+description: Methods for encoding and organizing knowledge in AI systems
+---
+
+# Knowledge Representation
+
+How knowledge is structured, stored, and accessed fundamentally shapes an AGI system's capabilities. This page covers the major paradigms for knowledge representation.
+
+## Why Knowledge Representation Matters
+
+AGI systems must:
+- Store facts and relationships
+- Perform logical reasoning
+- Generalize from examples
+- Interface with natural language
+- Handle uncertainty and incomplete information
+
+## Symbolic Representations
+
+### Semantic Networks
+
+- **Nodes**: Concepts or entities
+- **Edges**: Relationships between concepts
+- **Inheritance**: IS-A hierarchies, property inheritance
+- **Applications**: Conceptual understanding, natural language processing
+
+### Frames and Scripts
+
+- **Frames**: Stereotypical situations with slots and fillers
+- **Scripts**: Sequences of events (restaurant script, airport script)
+- **Default Reasoning**: Assumptions and exceptions
+- **Applications**: Story understanding, commonsense reasoning
+
+### Ontologies
+
+- **Classes and Instances**: Taxonomic organization
+- **Properties and Relations**: Attributes and connections
+- **Axioms**: Logical constraints and rules
+- **OWL and RDF**: Web ontology standards
+- **Applications**: Knowledge graphs, semantic web, domain modeling
+
+### Logic-Based Representations
+
+- **Predicate Logic**: Facts and rules
+- **Horn Clauses**: Computational logic (Prolog)
+- **Description Logic**: Decidable fragments for ontologies
+- **Non-monotonic Logic**: Reasoning with defaults and exceptions
+
+## Graph-Based Knowledge
+
+### Knowledge Graphs
+
+- **Entities**: Real-world objects and concepts
+- **Relations**: Typed edges connecting entities
+- **Triple Stores**: Subject-predicate-object storage (e.g., Wikidata, DBpedia)
+- **Graph Embeddings**: TransE, DistMult, ComplEx for link prediction
+
+### Property Graphs
+
+- **Nodes with Properties**: Attributes on entities
+- **Labeled Edges**: Relationship types
+- **Neo4j and Graph Databases**: Querying with Cypher
+- **Applications**: Social networks, recommendation systems
+
+## Vector Representations
+
+### Word Embeddings
+
+- **Word2Vec**: CBOW and Skip-gram models
+- **GloVe**: Global vectors for word representation
+- **FastText**: Subword information
+- **Applications**: Similarity, analogy, clustering
+
+### Sentence and Document Embeddings
+
+- **BERT**: Bidirectional transformers
+- **Sentence-BERT**: Sentence-level representations
+- **Universal Sentence Encoder**
+
+### Knowledge Graph Embeddings
+
+- **TransE**: Translation-based embeddings
+- **RotatE**: Rotation in complex space
+- **Graph Neural Networks**: Learning on graph structures
+
+## Hybrid Approaches
+
+### Neuro-Symbolic Systems
+
+- **Neural Networks + Logic**: Combining learning and reasoning
+- **Differentiable Logic**: End-to-end training with logical constraints
+- **Knowledge-Enhanced Models**: Injecting structured knowledge into neural models
+
+### Atomspace (OpenCog)
+
+- **Hypergraph**: Generalization of graphs with hyper-edges
+- **Atoms**: Nodes and links as basic units
+- **TruthValues and AttentionValues**: Uncertainty and importance
+- **Pattern Matching**: Flexible query language
+- **Applications**: Hyperon framework's knowledge store
+
+## Conceptual Spaces
+
+### Gärdenfors Framework
+
+- **Quality Dimensions**: Features as geometric dimensions
+- **Convex Regions**: Natural categories
+- **Conceptual Combination**: Operations in geometric space
+- **Applications**: Similarity, categorization, metaphor
+
+## Distributed Representations
+
+### Neural Network Activations
+
+- **Hidden Layer Representations**: Learned features
+- **Attention Mechanisms**: Dynamic focus
+- **Emergent Structure**: Self-organized representations
+
+## Challenges
+
+- **Grounding**: Connecting symbols to perceptual experience
+- **Compositionality**: Building complex meanings from parts
+- **Context-Dependence**: Meaning shifts with context
+- **Scalability**: Managing millions of facts
+- **Integration**: Combining multiple representation types
+
+## Tools and Frameworks
+
+- **Protégé**: Ontology editor
+- **OpenCyc**: Large-scale ontology
+- **RDFLib**: Python library for RDF
+- **Neo4j**: Graph database
+- **NetworkX**: Graph analysis in Python
+
+## Recommended Resources
+
+- *Knowledge Representation and Reasoning* - Brachman and Levesque
+- *Semantic Web for the Working Ontologist* - Allemang and Hendler
+- *Artificial Intelligence: A Modern Approach* (KR chapters) - Russell and Norvig
+
+---
+
+Next: [Learning Theory](/docs/foundations/learning-theory)

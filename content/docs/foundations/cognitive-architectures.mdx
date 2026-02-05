@@ -1,0 +1,252 @@
+---
+title: Cognitive Architectures
+description: Unified frameworks for modeling intelligent behavior
+---
+
+# Cognitive Architectures
+
+Cognitive architectures provide unified frameworks for building complete intelligent systems. Unlike narrow AI approaches, they aim to integrate perception, learning, reasoning, and action into coherent agents.
+
+## What is a Cognitive Architecture?
+
+A cognitive architecture specifies:
+- **Fixed Structure**: Core mechanisms that don't change
+- **Learning Components**: What improves with experience
+- **Knowledge Representation**: How information is stored
+- **Control Flow**: How processing is orchestrated
+- **Integration**: How components interact
+
+## Classical Architectures
+
+### SOAR (State, Operator, And Result)
+
+**Overview**: Production system architecture developed since 1983.
+
+**Key Features**:
+- **Production Rules**: IF-THEN patterns
+- **Working Memory**: Current state
+- **Long-Term Memory**: Procedural, semantic, episodic
+- **Impasse-Driven Learning**: Learning when stuck
+
+**Strengths**:
+- Well-studied and mature
+- Strong problem-solving capabilities
+- Chunking for speedup learning
+
+**Applications**: Game playing, robotics, tutoring systems
+
+### ACT-R (Adaptive Control of Thought-Rational)
+
+**Overview**: Cognitive architecture modeling human cognition.
+
+**Key Features**:
+- **Modules**: Declarative, procedural, perceptual, motor
+- **Buffers**: Limited-capacity working memory
+- **Subsymbolic Level**: Activation, utilities, learning
+- **Production Compilation**: Learning by doing
+
+**Strengths**:
+- Cognitive plausibility
+- Predictive modeling of human performance
+- Strong psychological grounding
+
+**Applications**: Human-computer interaction, cognitive modeling, education
+
+### CLARION (Connectionist Learning with Adaptive Rule Induction ON-line)
+
+**Overview**: Hybrid architecture with explicit and implicit knowledge.
+
+**Key Features**:
+- **Dual Representation**: Symbolic and subsymbolic (neural)
+- **Bottom-Up Learning**: Extracting rules from neural nets
+- **Top-Down Learning**: Refining explicit knowledge
+- **Metacognition**: Monitoring and control
+
+**Strengths**:
+- Integrates symbolic and connectionist approaches
+- Models implicit learning
+
+## Symbolic vs. Subsymbolic
+
+### Symbolic Architectures
+
+- **Representation**: Discrete symbols and rules
+- **Reasoning**: Logical inference, search
+- **Learning**: Rule induction, chunking
+- **Strengths**: Explainability, compositionality
+- **Weaknesses**: Brittleness, grounding problem
+
+### Subsymbolic (Connectionist)
+
+- **Representation**: Distributed patterns in neural networks
+- **Reasoning**: Pattern matching, constraint satisfaction
+- **Learning**: Gradient descent, backpropagation
+- **Strengths**: Robustness, learning from data
+- **Weaknesses**: Interpretability, catastrophic forgetting
+
+### Hybrid Architectures
+
+- **Combining Strengths**: Neural perception + symbolic reasoning
+- **Examples**: CLARION, NARS, OpenCog, Sigma
+- **Challenge**: Seamless integration
+
+## Modern Cognitive Architectures
+
+### NARS (Non-Axiomatic Reasoning System)
+
+**Overview**: Reasoning system designed for AGI with limited resources.
+
+**Key Features**:
+- **Non-Axiomatic Logic**: Uncertain, inconsistent knowledge
+- **Experience-Grounded Semantics**: Pragmatic truth
+- **Resource-Conscious**: Time and space constraints
+- **Real-Time Adaptation**: Continuous learning
+
+**Strengths**:
+- Handles uncertainty naturally
+- Flexible knowledge representation
+- Designed for open-world environments
+
+### OpenCog
+
+**Overview**: Integrative AGI framework (predecessor to Hyperon).
+
+**Key Components**:
+- **AtomSpace**: Hypergraph knowledge store
+- **PLN (Probabilistic Logic Networks)**: Uncertain inference
+- **MOSES**: Program evolution
+- **Neural-symbolic integration**
+
+**Strengths**:
+- Multiple reasoning paradigms
+- Extensible architecture
+- Active research community
+
+### Sigma
+
+**Overview**: Integrative architecture based on graphical models.
+
+**Key Features**:
+- **Unified Representation**: Factor graphs
+- **Multiple Levels**: Reactive, routine, deliberative, reflective
+- **Perception to Cognition**: End-to-end integration
+
+**Strengths**:
+- Probabilistic reasoning throughout
+- Cognitive hierarchy
+
+### Lida (Learning Intelligent Distribution Agent)
+
+**Overview**: Biologically inspired cognitive cycle.
+
+**Key Features**:
+- **Global Workspace Theory**: Consciousness model
+- **Cognitive Cycle**: ~10 Hz processing
+- **Action Selection**: Behavior networks
+
+**Strengths**:
+- Models consciousness mechanisms
+- Continuous operation
+
+## Functional Components
+
+### Perception
+
+- **Sensory Processing**: Vision, audition, touch
+- **Feature Extraction**: Pattern recognition
+- **Object Recognition**: Identification and categorization
+- **Integration**: Multimodal fusion
+
+### Memory Systems
+
+- **Working Memory**: Current focus, limited capacity
+- **Episodic Memory**: Personal experiences, events
+- **Semantic Memory**: Facts and concepts
+- **Procedural Memory**: Skills and habits
+
+### Reasoning
+
+- **Deductive**: Logical inference
+- **Inductive**: Generalization from examples
+- **Abductive**: Explanation generation
+- **Analogical**: Transfer from similar situations
+
+### Learning
+
+- **Supervised**: Learning from labeled data
+- **Unsupervised**: Pattern discovery
+- **Reinforcement**: Learning from rewards
+- **Transfer**: Applying knowledge to new domains
+
+### Action Selection
+
+- **Planning**: Goal-directed behavior
+- **Reactive**: Immediate responses
+- **Habits**: Automatic behaviors
+- **Deliberation**: Weighing alternatives
+
+## AGI-Oriented Architectures
+
+### Requirements for AGI
+
+- **Generality**: Operate across diverse domains
+- **Autonomy**: Self-directed learning and adaptation
+- **Efficiency**: Practical resource usage
+- **Robustness**: Handle uncertainty and novelty
+- **Scalability**: Grow with experience
+
+### Hyperon (Next-generation OpenCog)
+
+Modern AGI architecture covered in detail in [Hyperon section](/docs/hyperon/overview).
+
+Key innovations:
+- MeTTa language for knowledge and code
+- Distributed hypergraph
+- Pattern matching and rewriting
+- Integration of neural and symbolic
+
+## Evaluation and Benchmarks
+
+### Criteria
+
+- **Task Performance**: Accuracy on benchmarks
+- **Learning Speed**: Sample efficiency
+- **Transfer**: Generalization to new tasks
+- **Explainability**: Interpretability of decisions
+- **Resource Efficiency**: Computational requirements
+
+### Benchmarks
+
+- **General Intelligence Tests**: Raven's matrices, ARC
+- **Multi-Task Learning**: Meta-learning benchmarks
+- **Commonsense Reasoning**: Winograd schemas, COPA
+- **Embodied AI**: Robotics, simulation environments
+
+## Design Principles
+
+### Unified Cognition
+
+Single framework for all cognitive phenomena (Newell's hypothesis).
+
+### Bounded Rationality
+
+Satisficing under resource constraints (Simon).
+
+### Embodiment
+
+Cognition arises from sensorimotor interaction (embodied cognition).
+
+### Developmental Learning
+
+Learning trajectories from simple to complex (constructivism).
+
+## Recommended Resources
+
+- *Unified Theories of Cognition* - Allen Newell
+- *The Cambridge Handbook of Cognitive Architectures* - Müller (Ed.)
+- *Artificial General Intelligence* - Goertzel and Pennachin
+- *How to Build a Brain* - Chris Eliasmith
+
+---
+
+Next: [Information Theory](/docs/foundations/information-theory)

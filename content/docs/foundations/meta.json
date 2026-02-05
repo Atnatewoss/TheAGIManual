@@ -1,0 +1,14 @@
+{
+    "title": "Foundations",
+    "pages": [
+        "overview",
+        "mathematical-foundations",
+        "computational-models",
+        "knowledge-representation",
+        "learning-theory",
+        "logic-and-reasoning",
+        "cognitive-architectures",
+        "information-theory",
+        "search-and-planning"
+    ]
+}

@@ -1,0 +1,61 @@
+---
+title: Information Theory
+description: The mathematical study of coding, transmission, and representation of information
+---
+
+# Information Theory
+
+Information theory provides the fundamental limits on data compression and communication, and offers powerful tools for understanding learning and complexity in AGI systems.
+
+## Core Concepts
+
+### Entropy (H)
+Entropy is the measure of uncertainty or surprise in a random variable.
+- **Formula**: $H(X) = -\sum P(x) \log P(x)$
+- **Significance**: Lower bound on the average number of bits needed to represent samples.
+
+### Joint and Conditional Entropy
+- **Joint Entropy $H(X, Y)$**: Total uncertainty in two variables.
+- **Conditional Entropy $H(Y|X)$**: Uncertainty in $Y$ given $X$.
+- **Chain Rule**: $H(X, Y) = H(X) + H(Y|X)$.
+
+### Mutual Information (I)
+Measure of how much information is shared between two variables.
+- **Formula**: $I(X; Y) = H(X) - H(X|Y)$.
+- **Role in AGI**: Essential for feature selection, representation learning, and understanding dependencies.
+
+### Kullback-Leibler Divergence (KL)
+A measure of how one probability distribution $Q$ is different from a reference probability distribution $P$.
+- **Definition**: $D_{KL}(P || Q) = \sum P(x) \log \frac{P(x)}{Q(x)}$.
+- **Application**: Loss functions in Variational Autoencoders (VAEs) and policy optimization.
+
+## Information Theory in Learning
+
+### Maximum Entropy Principle
+In the absence of complete information, the distribution that best represents the current state of knowledge is the one with the largest entropy.
+- **Application**: Regularization and probabilistic modeling.
+
+### Information Bottleneck
+A principle for representation learning that seeks to compress the input while preserving information about the target.
+- **Goal**: Minimize $I(X; T)$ while maximizing $I(T; Y)$.
+
+### Minimum Description Length (MDL)
+A principle that states the best hypothesis for a given set of data is the one that leads to the best compression of the data.
+- **Relation to AGI**: Formalizes Occam's Razor for model selection.
+
+## Algorithmic Information Theory
+
+### Kolmogorov Complexity
+The length of the shortest program that produces a given string as output.
+- **Incomputability**: Generally incomputable, but serves as a theoretical ideal.
+- **Solomonoff Induction**: A universal framework for prediction based on Kolmogorov complexity.
+
+## Applications to AGI
+
+1. **Self-Supervised Learning**: Maximizing mutual information between different views of the same data.
+2. **Intrinsic Motivation**: Using information gain (curiosity) as a reward signal in reinforcement learning.
+3. **Complexity Analysis**: Measuring the "intelligence" or "complexity" of an agent's internal model.
+
+---
+
+Next: [Search and Planning](/docs/foundations/search-and-planning)

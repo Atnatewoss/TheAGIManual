@@ -1,0 +1,206 @@
+---
+title: Logic and Reasoning
+description: Formal logic systems and automated reasoning for AGI
+---
+
+# Logic and Reasoning
+
+Logical reasoning is a cornerstone of AGI. While modern systems often rely on statistical learning, symbolic reasoning remains essential for explainability, verification, and handling commonsense knowledge.
+
+## Propositional Logic
+
+### Syntax and Semantics
+
+- **Propositions**: Atomic statements (p, q, r)
+- **Connectives**: AND (∧), OR (∨), NOT (¬), IMPLIES (→)
+- **Truth Tables**: Defining logical operations
+- **Tautologies and Contradictions**
+
+### Inference Rules
+
+- **Modus Ponens**: p → q, p ⊢ q
+- **Modus Tollens**: p → q, ¬q ⊢ ¬p
+- **Resolution**: Proof by refutation
+- **Natural Deduction**: Formal proof systems
+
+### SAT Solvers
+
+- **Boolean Satisfiability**: Finding variable assignments
+- **DPLL Algorithm**: Davis-Putnam-Logemann-Loveland
+- **CDCL**: Conflict-driven clause learning
+- **Applications**: Planning, verification, cryptography
+
+## First-Order Logic (FOL)
+
+### Expressiveness
+
+- **Predicates**: Relations and functions
+- **Quantifiers**: ∀ (forall) and ∃ (exists)
+- **Terms**: Constants, variables, functions
+- **Formulas**: Well-formed expressions
+
+### Unification and Resolution
+
+- **Unification**: Making terms identical
+- **Most General Unifier (MGU)**
+- **Resolution in FOL**: Generalized proof method
+- **Completeness**: Every true formula is provable
+
+### Prolog and Logic Programming
+
+- **Horn Clauses**: Restricted FOL for computation
+- **Backward Chaining**: Goal-driven reasoning
+- **Cut and Negation**: Control and closed-world assumption
+- **Applications**: Expert systems, natural language processing
+
+## Modal Logic
+
+### Alethic Modalities
+
+- **Necessity (□)**: Must be true
+- **Possibility (◇)**: Could be true
+- **Kripke Semantics**: Possible worlds
+- **Applications**: Reasoning about knowledge and belief
+
+### Epistemic Logic
+
+- **Knowledge (K)**: What an agent knows
+- **Belief (B)**: What an agent believes
+- **Common Knowledge**: Mutual awareness
+- **Applications**: Multi-agent systems, game theory
+
+### Temporal Logic
+
+- **Linear Time Logic (LTL)**: Always, eventually, until
+- **Computation Tree Logic (CTL)**: Branching time
+- **Model Checking**: Verifying temporal properties
+- **Applications**: Reactive systems, planning
+
+## Probabilistic Reasoning
+
+### Bayesian Networks
+
+- **Directed Acyclic Graphs (DAGs)**: Variables and dependencies
+- **Conditional Probability Tables (CPTs)**
+- **Inference**: Computing posterior probabilities
+- **Learning**: Structure and parameter learning
+
+### Markov Networks
+
+- **Undirected Graphical Models**: Cliques and potentials
+- **Markov Random Fields**: Spatial reasoning
+- **Inference**: Belief propagation, MCMC
+
+### Probabilistic Logic
+
+- **Markov Logic Networks**: Weighted first-order formulas
+- **Probabilistic Prolog**: Extending logic programming
+- **ProbLog, Distributional Clauses**
+- **Applications**: Uncertain knowledge, statistical relational learning
+
+## Non-Monotonic Reasoning
+
+### Default Logic
+
+- **Defaults**: Assumptions that can be retracted
+- **Extensions**: Consistent sets of beliefs
+- **Closed-World Assumption**: Absence of evidence as evidence of absence
+
+### Circumscription
+
+- **Minimizing Abnormality**: Preferring normal explanations
+- **Applications**: Commonsense reasoning
+
+### Defeasible Reasoning
+
+- **Priorities Among Rules**: Resolving conflicts
+- **Argumentation Frameworks**: Structured debates
+- **Applications**: Legal reasoning, ethics
+
+## Automated Theorem Proving
+
+### Resolution-Based Provers
+
+- **Vampire, E, SPASS**: State-of-the-art provers
+- **Clause Normal Form (CNF)**
+- **Subsumption and Simplification**
+
+### Tableau Methods
+
+- **Systematic Search**: Building proof trees
+- **Model Finding**: Constructing counterexamples
+
+### SMT Solvers
+
+- **Satisfiability Modulo Theories**: Combining logic and domain theories
+- **Z3, CVC4**: Industrial-strength solvers
+- **Applications**: Formal verification, program analysis
+
+## Reasoning Under Uncertainty
+
+### Fuzzy Logic
+
+- **Fuzzy Sets**: Degrees of membership
+- **Fuzzy Inference**: Approximate reasoning
+- **Defuzzification**: Crisp outputs
+- **Applications**: Control systems, decision-making
+
+### Dempster-Shafer Theory
+
+- **Belief Functions**: Representing uncertainty
+- **Combining Evidence**: Dempster's rule
+- **Applications**: Sensor fusion, expert systems
+
+## Abductive Reasoning
+
+### Inference to Best Explanation
+
+- **Hypothesis Generation**: Explaining observations
+- **Parsimony**: Preferring simpler explanations
+- **Applications**: Diagnosis, scientific discovery
+
+## Common Sense Reasoning
+
+### Qualitative Reasoning
+
+- **Qualitative Physics**: Reasoning without exact numbers
+- **Spatial Reasoning**: Topological and metric relations
+- **Temporal Reasoning**: Before, after, during
+
+### Frame Problem
+
+- **Persistence**: What stays the same?
+- **Ramification**: Indirect effects
+- **Solutions**: Situation calculus, event calculus
+
+## Argumentation Theory
+
+### Abstract Argumentation
+
+- **Arguments as Nodes**: Attack relations
+- **Semantics**: Grounded, preferred, stable extensions
+- **Applications**: Dialogue systems, decision support
+
+## Logical Foundations for AI
+
+### Situation Calculus
+
+- **Actions and Situations**: Representing dynamic worlds
+- **Successor State Axioms**: Frame axiom solution
+- **Golog**: Programming in situation calculus
+
+### Event Calculus
+
+- **Events and Fluents**: Alternative to situation calculus
+- **Narrative Understanding**: Story comprehension
+
+## Recommended Resources
+
+- *Artificial Intelligence: A Modern Approach* (Logic chapters) - Russell and Norvig
+- *Logic for Computer Science* - Steve Reeves and Mike Clarke
+- *Handbook of Knowledge Representation* - van Harmelen et al.
+- *Probabilistic Graphical Models* - Koller and Friedman
+
+---
+
+Next: [Cognitive Architectures](/docs/foundations/cognitive-architectures)

@@ -1,0 +1,171 @@
+---
+title: Learning Theory
+description: Statistical learning, PAC learning, and deep learning fundamentals
+---
+
+# Learning Theory
+
+Learning theory provides the mathematical foundations for how machines can generalize from data. This page covers key concepts from statistical learning to modern deep learning.
+
+## Statistical Learning Theory
+
+### Generalization and Overfitting
+
+- **Training vs Test Error**: The generalization gap
+- **Bias-Variance Tradeoff**: Model complexity and performance
+- **Cross-Validation**: Estimating generalization error
+- **Regularization**: L1, L2, dropout, early stopping
+
+### PAC Learning
+
+**Probably Approximately Correct (PAC) Learning**:
+- **Sample Complexity**: How much data is needed?
+- **VC Dimension**: Measuring model expressiveness
+- **Realizability**: When the true function is in the hypothesis class
+- **Agnostic Learning**: Learning without realizability assumptions
+
+### Risk Minimization
+
+- **Empirical Risk Minimization (ERM)**: Minimizing training loss
+- **Structural Risk Minimization (SRM)**: Trading fit for complexity
+- **Consistency**: Convergence as data grows
+
+## Supervised Learning
+
+### Classification
+
+- **Linear Classifiers**: Perceptrons, logistic regression, SVM
+- **Decision Trees**: Splitting criteria, pruning
+- **Ensemble Methods**: Bagging, boosting, random forests
+- **Neural Networks**: Universal approximation theorem
+
+### Regression
+
+- **Linear Regression**: Least squares, gradient descent
+- **Non-linear Regression**: Polynomial features, kernel methods
+- **Gaussian Processes**: Probabilistic regression
+
+## Unsupervised Learning
+
+### Clustering
+
+- **K-means**: Centroid-based clustering
+- **Hierarchical Clustering**: Dendrograms, agglomerative vs divisive
+- **DBSCAN**: Density-based clustering
+- **Gaussian Mixture Models**: Probabilistic clustering
+
+### Dimensionality Reduction
+
+- **PCA**: Principal component analysis
+- **t-SNE**: Visualization of high-dimensional data
+- **Autoencoders**: Neural network-based compression
+- **Manifold Learning**: Discovering low-dimensional structure
+
+## Deep Learning Fundamentals
+
+### Neural Network Basics
+
+- **Feedforward Networks**: Fully connected layers
+- **Activation Functions**: ReLU, sigmoid, tanh, softmax
+- **Backpropagation**: Chain rule for gradient computation
+- **Optimization**: SGD, momentum, Adam
+
+### Convolutional Neural Networks
+
+- **Convolutional Layers**: Local connectivity, weight sharing
+- **Pooling**: Max pooling, average pooling
+- **Architectures**: LeNet, AlexNet, VGG, ResNet
+- **Applications**: Computer vision, pattern recognition
+
+### Recurrent Neural Networks
+
+- **Sequential Data**: Time series, language
+- **LSTM and GRU**: Gating mechanisms for long-term dependencies
+- **Bidirectional RNNs**: Forward and backward context
+- **Applications**: Language modeling, sequence-to-sequence
+
+### Transformers
+
+- **Self-Attention**: Relating positions in sequences
+- **Multi-Head Attention**: Parallel attention mechanisms
+- **Positional Encoding**: Sequence order information
+- **Applications**: BERT, GPT, language understanding
+
+## Reinforcement Learning Basics
+
+### Markov Decision Processes
+
+- **States, Actions, Rewards**: MDP formulation
+- **Policy**: Mapping from states to actions
+- **Value Functions**: Expected return from states/actions
+- **Bellman Equations**: Recursive value relationships
+
+### Learning Methods
+
+- **Q-Learning**: Off-policy TD learning
+- **Policy Gradient**: Directly optimizing policies
+- **Actor-Critic**: Combining value and policy methods
+- **Deep RL**: DQN, A3C, PPO
+
+## Meta-Learning
+
+### Learning to Learn
+
+- **Few-Shot Learning**: Generalizing from few examples
+- **Transfer Learning**: Using knowledge from related tasks
+- **Neural Architecture Search**: Automated model design
+- **Hyperparameter Optimization**: Bayesian optimization, grid search
+
+## Information-Theoretic Learning
+
+### Mutual Information
+
+- **Maximizing I(X;Y)**: Learning useful representations
+- **InfoMax Principle**: Self-supervised learning
+- **Variational Information Maximization**
+
+### Compression and Generalization
+
+- **Minimum Description Length**: Model selection via compression
+- **Rate-Distortion Theory**: Information and reconstruction tradeoff
+
+## Online Learning
+
+### Sequential Decision Making
+
+- **Regret Bounds**: Performance relative to best fixed strategy
+- **Multi-Armed Bandits**: Exploration vs exploitation
+- **Contextual Bandits**: Incorporating feature information
+
+## Curriculum Learning
+
+### Structured Learning Paths
+
+- **Easy-to-Hard**: Training on increasingly difficult examples
+- **Self-Paced Learning**: Letting the model choose examples
+- **Teacher-Student**: Distillation and knowledge transfer
+
+## Practical Considerations
+
+### Data Augmentation
+
+- **Image Augmentation**: Rotation, cropping, color jittering
+- **Text Augmentation**: Back-translation, paraphrasing
+- **Synthetic Data**: Simulation, generative models
+
+### Batch Normalization
+
+- **Internal Covariate Shift**: Stabilizing layer inputs
+- **Training Acceleration**: Faster convergence
+- **Regularization Effect**: Implicit regularization
+
+## Recommended Resources
+
+- *Understanding Machine Learning* - Shalev-Shwartz and Ben-David
+- *Deep Learning* - Goodfellow, Bengio, and Courville
+- *Pattern Recognition and Machine Learning* - Christopher Bishop
+- *Reinforcement Learning: An Introduction* - Sutton and Barto
+
+---
+
+Next: [Logic and Reasoning](/docs/foundations/logic-and-reasoning)
