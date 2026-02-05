@@ -2,11 +2,14 @@
     "title": "Foundations",
     "pages": [
         "overview",
+        "intelligence-spectrum",
+        "history",
         "mathematical-foundations",
         "computational-models",
         "knowledge-representation",
         "learning-theory",
         "logic-and-reasoning",
+        "predictive-causal-learning",
         "cognitive-architectures",
         "information-theory",
         "search-and-planning"
