@@ -1,0 +1,40 @@
+---
+title: Probabilistic Architectures
+description: Reasoning under uncertainty using Bayesian and graphical models
+---
+
+# Probabilistic Architectures
+
+AGI systems must operate in a noisy, uncertain world. Probabilistic architectures use the mathematical language of probability to represent and reason about this uncertainty.
+
+## Bayesian Networks
+A way of representing a joint probability distribution over multiple variables using a directed acyclic graph (DAG).
+- **Nodes**: Random variables.
+- **Edges**: Conditional dependencies.
+
+### Inference
+Estimating the state of some variables given observations of others (e.g., "Given sensory input $X$, what is the probability that object $Y$ is present?").
+
+## Markov Models
+Architectures for dealing with sequences and time-series data.
+- **Hidden Markov Models (HMMs)**: Used in early speech and gesture recognition.
+- **Markov Random Fields**: Undirected models used in computer vision.
+
+## Probabilistic Logic Networks (PLN)
+An ambitious framework used in OpenCog/Hyperon that attempts to combine formal logic with probability.
+- **Truth Values**: Instead of just 'True' or 'False', atoms have truth values representing strength and confidence.
+
+## Bayesian Brain Hypothesis
+A theoretical framework in neuroscience suggesting that the brain is essentially a "Bayesian inference engine" that maintains a probabilistic model of the world and updates it based on sensory evidence.
+
+## Strengths
+- **Handling Noise**: Naturally handles contradictory or incomplete data.
+- **Principled Learning**: Bayesian updating provides a mathematically optimal way to integrate new evidence.
+- **Uncertainty Quantification**: The system "knows what it doesn't know."
+
+## Limitations
+- **Computational Complexity**: Exact inference is often NP-hard. Deep systems usually rely on approximations like Variational Inference or Markov Chain Monte Carlo (MCMC).
+
+---
+
+Next: [Hyperon Overview](/docs/hyperon/overview)

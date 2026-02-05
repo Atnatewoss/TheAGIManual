@@ -1,0 +1,41 @@
+---
+title: Evolutionary Systems
+description: Algorithms inspired by biological evolution for discovering AGI
+---
+
+# Evolutionary Systems
+
+Evolutionary computation is based on the idea that intelligence can be discovered by simulating the process of natural selection: variation, selection, and inheritance.
+
+## Key Concepts
+
+### Genetic Algorithms (GA)
+Representing potential solutions as "chromosomes" (often bitstrings) and evolving them through crossover and mutation.
+
+### Genetic Programming (GP)
+Evolving **computer programs** rather than just data. Programs are often represented as trees or graphs.
+
+### Neuroevolution
+Evolving the structure and weights of neural networks.
+- **NEAT (NeuroEvolution of Augmenting Topologies)**: A popular algorithm that starts with simple networks and evolves complexity over time.
+
+## Evolutionary Computation in AGI
+
+### Open-ended Evolution
+The goal of creating systems that continuously generate novel and increasingly complex behaviors, rather than just solving a fixed task.
+
+### MOSES (Meta-Optimizing Semantic Evolutionary Search)
+A component of OpenCog/Hyperon that evolves program fragments in a representation-agnostic way. It uses local search to find high-performing programs and creates new ones based on identified patterns.
+
+## Strengths
+- **Non-Differentiable Search**: Can optimize systems where gradients aren't available (e.g., discrete logic, hardware design).
+- **Exploration**: Genetic diversity helps prevent the system from getting stuck in local optima.
+- **Architecture Search**: Can discover novel neural architectures (NAS) that humans wouldn't think of.
+
+## Weaknesses
+- **Computational Cost**: Often requires many generations and evaluations, which can be expensive.
+- **Scaling**: Maintaining diversity in very large search spaces is challenging.
+
+---
+
+Next: [Probabilistic Architectures](/docs/architectures/probabilistic-architectures)

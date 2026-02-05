@@ -1,0 +1,11 @@
+{
+    "title": "Architectures",
+    "pages": [
+        "overview",
+        "symbolic-systems",
+        "neural-systems",
+        "neuro-symbolic",
+        "evolutionary-systems",
+        "probabilistic-architectures"
+    ]
+}

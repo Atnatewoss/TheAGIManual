@@ -1,0 +1,44 @@
+---
+title: Neuro-symbolic Integration
+description: Bridging the gap between neural learning and symbolic reasoning
+---
+
+# Neuro-symbolic Integration
+
+Neuro-symbolic AI (also known as Neural-Symbolic computing) is an area of AI that seeks to combine the strengths of neural networks (learning, perception) with those of symbolic AI (reasoning, explainability).
+
+## The Dual-Process Theory Analogy
+Psychologists often divide human cognition into two systems (Daniel Kahneman):
+- **System 1**: Fast, instinctive, emotional, and associative (Neural).
+- **System 2**: Slower, more deliberative, logical, and rule-based (Symbolic).
+
+Neuro-symbolic AI aims to build artificial systems that integrate both.
+
+## Major Approaches to Integration
+
+### 1. Neural-to-Symbolic (Symbolic Learning)
+Using neural networks to extract symbols and relations from raw data.
+- **Example**: A CNN identifying objects and their spatial relationships to build a scene graph used by a symbolic planner.
+
+### 2. Symbolic-to-Neural (Knowledge Injection)
+Using symbolic knowledge to constrain or guide neural network training.
+- **Example**: Logic Tensor Networks (LTNs) that use fuzzy logic to define constraints in a neural loss function.
+
+### 3. Integrated Neural-Symbolic
+Systems where both neural and symbolic components interact in a single framework.
+- **Example**: The **Hyperon** framework (covered in the next section), which uses the MeTTa language to allow neural models and symbolic atoms to coexist and interact.
+
+## Why it's Important for AGI
+
+1. **Reasoning over Perception**: Allows the system to reason logically about what it perceives via neural networks.
+2. **Explainability**: Neural predictions can be mapped back to symbolic explanations.
+3. **Data Efficiency**: Symbolic priors can help the system learn from fewer examples.
+4. **Safety and Verification**: Symbolic logic can be used to prove that a system will never violate specific safety constraints.
+
+## Challenges
+- **The Differentiability Gap**: Symbolic operations are often discrete and non-differentiable, making it hard to train the whole system via backpropagation.
+- **Representation Mapping**: How to map high-dimensional neural vectors to discrete symbols and back.
+
+---
+
+Next: [Evolutionary Systems](/docs/architectures/evolutionary-systems)
