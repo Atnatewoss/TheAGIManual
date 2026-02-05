@@ -1,0 +1,38 @@
+---
+title: Pattern Recognition Units (PRUs)
+description: The fundamental processing units of the PRIMUS architecture
+---
+
+# Pattern Recognition Units (PRUs)
+
+Pattern Recognition Units are the "atoms" of the PRIMUS architecture. Each PRU is a specialized worker that looks for a specific pattern in the sea of incoming data.
+
+## Structure of a PRU
+
+Each unit typically consists of:
+1. **Input Channels**: Connections from lower-level units or raw sensors.
+2. **Recognition Engine**: The algorithm used to find the pattern (could be a small neural net, a MeTTa pattern, or a statistical model).
+3. **Feedback Mechanism**: Connections from higher-level units that provide "context" or "expectations."
+4. **Output Signal**: A measure of how strongly the pattern was detected.
+
+## The Recognition Process
+
+### Bottom-Up Processing
+Units at the bottom of the hierarchy process raw sensory data (e.g., pixels, audio samples). They signal the presence of simple features to the units above them.
+
+### Top-Down Influence
+Higher-level units provide **expectations** to the levels below.
+- *Example*: If a high-level unit has detected a "Face," it sends top-down signals to lower units to "look harder" for eyes and a nose, even if the image is noisy.
+
+## Learning in PRUs
+PRUs are not static. They can learn to identify new patterns through:
+- **Hebbian Learning**: "Neurons that fire together, wire together."
+- **Competitive Learning**: Units compete to represent different features of the data.
+- **Supervised Fine-Tuning**: Using high-level goals to refine low-level recognition.
+
+## Distributed Nature
+In a large PRIMUS system, there might be thousands or millions of PRUs. This allows for massive parallel processing and high fault tolerance.
+
+---
+
+Next: [Hierarchical Integration](/docs/primus/integration)
