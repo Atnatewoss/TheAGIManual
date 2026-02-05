@@ -3,6 +3,10 @@
     "pages": [
         "overview",
         "benchmarks",
-        "simulations"
+        "simulations",
+        "agent-blueprints",
+        "toy-reasoning",
+        "rl-demo",
+        "memory-experiments"
     ]
 }
