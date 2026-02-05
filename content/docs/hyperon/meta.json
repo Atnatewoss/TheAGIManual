@@ -2,9 +2,12 @@
     "title": "Hyperon",
     "pages": [
         "overview",
+        "why-hyperon",
         "atomspace",
+        "neural-symbolic-integration",
         "pln",
         "moses",
-        "pattern-matcher"
+        "pattern-matcher",
+        "ecosystem"
     ]
 }

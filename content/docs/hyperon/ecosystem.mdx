@@ -1,0 +1,56 @@
+---
+title: Hyperon Ecosystem
+description: Tools, DAS, and integrations supporting the Hyperon framework
+---
+
+# Hyperon Ecosystem
+
+Building AGI is a massive engineering undertaking. The Hyperon framework is supported by an expanding ecosystem of tools and specialized sub-systems.
+
+## The Core Stack
+
+```mermaid
+graph TD
+    MeTTa[MeTTa Language] -->|Executes on| Core[Hyperon Core]
+    Core -->|Queries| DAS[Distributed AtomSpace]
+    
+    subgraph Reasoning Engines
+    PLN[PLN]
+    MOSES[MOSES]
+    PM[Pattern Matcher]
+    end
+    
+    Core <--> Reasoning Engines
+    
+    subgraph External
+    Py[Python Bridge]
+    ROS[Robot OS]
+    end
+    
+    Core <--> Py
+    Core <--> ROS
+```
+
+## Key Ecosystem Components
+
+### 1. Distributed AtomSpace (DAS)
+The storage layer. Unlike the original in-memory AtomSpace, DAS is designed to be persistent and distributed, allowing the knowledge base to survive restarts and grow to immense sizes.
+
+### 2. Python Bridge
+Most modern AI research happens in Python (PyTorch, TensorFlow). The Hyperon Python bridge allows researchers to:
+- Use MeTTa from within Python.
+- Call Python libraries (like LLMs or Vision models) from MeTTa.
+
+### 3. Dashboards and Visualizers
+Tools for inspecting the AtomSpace hypergraph. Seeing thousands of nodes and links visually is essential for debugging reasoning paths.
+
+### 4. Agent Toolkits
+Frameworks for connecting Hyperon to virtual environments (like Minecraft) or physical robots (via ROS).
+
+## Community and Development
+
+The Hyperon ecosystem is developed as an **Open Source** project. This ensures that the foundation of AGI is transparent, auditable, and accessible to everyone, preventing a "monopoly on intelligence."
+
+---
+
+Next: [PRIMUS section](/docs/primus/overview)
